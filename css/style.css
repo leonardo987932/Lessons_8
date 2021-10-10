@@ -1,0 +1,628 @@
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic");
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	line-height: 1;
+	font-family: "Roboto";
+	background-color: #fff;
+}
+html {
+	font-size: 16px; /* по умолчанию */
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+/* ------------------------------ */
+/* .block {
+	padding: 30px;
+	display: inline-block;
+	background-color: #7a956b;
+	margin: 0px 0px 20px 0px;
+} */
+/*
+Обращение к дочернему элементу, 
+при состоянии ("при наведении") родителя 
+*/
+/*
+.block:hover .link {
+
+}
+*/
+/* .link {
+	color: yellow;
+} */
+
+/* Псевдоклассы */
+/* Псевдоклассы состояния */
+
+/* Срабатывает для посещенных ссылок */
+/* .link:visited {
+	color: yellowgreen;
+} */
+/*
+Замечание: Из-за причин приватности, 
+браузеры строго ограничивают стили, которые вы 
+можете применить к элементу, используя этот псевдо-класс:
+только color, background-color, border-color,
+border-bottom-color, border-left-color, border-right-color,
+border-top-color, outline-color, column-rule-color, 
+fill и stroke. Заметьте также, что альфа-канал будет 
+игнорироваться: будет использоваться альфа-канал, 
+используемый для непосещённых ссылок вместо него 
+(но если прозрачность - 0, то в этот случае 
+игнорируется весь цвет, и один из используемых 
+стилей для непосещённых ссылок).
+*/
+
+/* 
+:hover
+Срабатывает при наведении на элемент, 
+часто применяется применяется как для ссылок так
+и для любого другого элемента.
+*/
+/* .link:hover {
+	color: red;
+} */
+
+/*
+:focus
+Срабатывает при получении элементом фокуса. 
+Часто применяется к елементам форм. Например инпутам.
+*/
+/* .link:focus {
+	color: blue;
+	outline: none;
+} */
+
+/*
+:active
+Срабатывает при нажатии на элемент. 
+В основном применяется к ссылкам и кнопкам.
+*/
+/* .link:active {
+	color: #000;
+} */
+/*
+.button {
+	border-radius: 5px;
+	padding: 20px 30px;
+	color: #fff;
+	background-color: yellowgreen;
+	box-shadow: 0px 8px 0px rgb(55, 73, 18);
+	position: relative;
+	top: 0;
+}
+.button:hover {
+	background-color: rgb(172, 228, 61);
+}
+.button:active {
+	top: 4px;
+	box-shadow: 0px 4px 0px rgb(55, 73, 18);
+}
+*/
+
+/*
+:target
+Срабатывает когда элемент является объектом 
+на который ссылаются
+*/
+
+/* .window {
+	padding: 20px;
+	color: #fff;
+	display: none;
+	background-color: #77608d;
+}
+.window:target {
+	display: block;
+} */
+
+/* Псевдоклассы положения в коде */
+
+/* .text {
+	margin: 0px 0px 50px 0px;
+}
+.text p {
+	/* margin: 0px 0px 20px 0px;
+}*/
+/* .list {
+}
+.list li {
+	margin: 0px 0px 20px 0px;
+} */
+
+/*
+:first-child
+Обращение к первому элементу в блоке
+*/
+/*
+.text p:first-child {
+	color: red;
+}
+*/
+/* Первый в блоке тег P, даже если выше 
+него есть другие теги */
+/*
+.text p:first-of-type {
+	color: red;
+}
+*/
+
+/* Любой оъект который первый внутри родителя */
+/*
+.text *:first-child {
+	color: red;
+}
+*/
+
+/*
+:last-child
+Обращение к последнему элементу в блоке
+*/
+/*
+.text p:last-child {
+	color: red;
+}
+*/
+/* Последний в блоке тег P, 
+если ниже него ничего нет  */
+/*
+.text p:last-of-type {
+ color: red;
+}
+*/
+/* Убираем лишний отступ. Вариант №1 */
+/*
+.text *:last-child {
+	margin-bottom: 0;
+}
+*/
+/*
+:nth-child(порядковый номер элемента)
+Обращение к конкретным элементам в блоке
+*/
+
+/* odd - нечетные */
+/* even - четные */
+/* .text p:nth-child(odd) {
+	color: red;
+}
+
+.text p:nth-child(2):hover {
+	color: green;
+} */
+
+/* Убираем лишний отступ. Вариант №2 
+ для любых объектов внутри объектов с классом .text
+ добавить внешний отступ 20px вниз, 
+ но кроме последнего объекта
+*/
+/* .text *:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+} */
+
+/*===============================================*/
+/*
+Псевдоэлемент ::first-line задает стиль первой 
+строки форматированного текста. 
+Длина этой строки зависит от многих факторов, 
+таких как используемый шрифт, 
+размер окна браузера, ширина блока, языка и т.д. 
+В правилах стиля допустимо 
+использовать только свойства, относящиеся к шрифту, 
+изменению цвета текста и фона.
+*/
+/* .content {
+	margin: 0px 0px 30px 0px;
+}
+.content::first-line {
+	/* color: red; 
+} */
+
+/*
+Псевдоэлемент ::first-letter определяет стиль первого
+ символа в тексте элемента, 
+к которому добавляется. 
+К этому псевдоэлементу могут применяться только
+ стилевые свойства, 
+связанные со свойствами шрифта, полями, отступами,
+ границами, цветом и фоном.
+*/
+/*
+.content {
+	text-indent: 30px;
+}
+.content::first-letter {
+	color: red;
+	font-size: 80px;
+}
+*/
+
+/*
+::before, ::after - СТРОЧНЫЕ !!!!
+использование content ОБЯЗАТЕЛЬНО! 
+
+*/
+/*
+.title {
+	margin: 0px 0px 40px 0px;
+	font-size: 40px;
+	font-weight: 900;
+	display: inline-block;
+}
+.title::after {
+	content: "";
+	display: block;
+	background-color: #34c759;
+	height: 2px;
+	width: 56px;
+	margin: 15px 0px 0px 0px;
+}
+
+.content::before {
+	content: "";
+}
+.content::after {
+	content: "";
+}
+
+.list {
+	margin: 0px 0px 30px 0px;
+}
+.list li {
+	padding: 0px 0px 0px 30px;
+}
+.list li::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	display: inline-block;
+	vertical-align: top;
+	margin: 4px 10px 0px -30px;
+	border-radius: 50%;
+}
+.list li:hover::before {
+	background-color: blue;
+}
+
+.num-list {
+	counter-reset: item;
+	margin: 0px 0px 30px 0px;
+}
+.num-list li:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+}
+.num-list li::before {
+	counter-increment: item;
+	content: counter(item) ")";
+	display: inline-block;
+	vertical-align: top;
+	color: red;
+	margin: 0px 20px 0px 0px;
+}
+.num-list li::before,
+.num-list li::after {
+}
+*/
+
+/*
+.item *:not(:last-child) {
+	margin-bottom: 30px;
+}
+*/
+/*
+.item {
+}
+
+.item *:last-child {
+	margin-bottom: 0px;
+}
+
+.item__title {
+	font-size: 50px;
+	margin: 0px 0px 30px 0px;
+}
+.item__text {
+	margin: 0px 0px 20px 0px;
+}
+.item__link {
+	margin: 0px 0px 30px 0px;
+	display: inline-block;
+}
+*/
+/*
+.test-list {
+}
+.test-list li {
+	background: url("../img/01.png") top right / 50px no-repeat;
+	padding: 0px 60px 0px 0px;
+}
+.test-list li:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+}
+*/
+
+/* .items {
+	background: #02133c;
+	padding: 50px 0;
+}
+.items__container {
+	max-width: 1020px;
+	margin: 0px auto;
+}
+.items__list {
+	font-size: 0;
+	margin: 0px -12px;
+}
+.item {
+	display: inline-block;
+	width: 25%;
+	padding: 0px 12px;
+	vertical-align: top;
+}
+.item__image {
+	display: inline-block;
+	width: 76px;
+	text-align: center;
+	vertical-align: top;
+}
+.item__body {
+	padding: 0px 0px 0px 11px;
+	vertical-align: top;
+	display: inline-block;
+}
+.item__title {
+	color: #c40b0b;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 42px;
+}
+.item__text {
+	color: #f5f5f5;
+	font-size: 16px;
+	line-height: 24px;
+	max-width: 130px;
+} */
+/*===============================================*/
+.dog {
+	background-color: #f5f5f5;
+	padding: 40px 120px;
+	margin: 0px 0px 100px 0px;
+}
+.dogcontainer {
+	max-width: 1028px;
+}
+.titlecnt {
+	max-width: 583px;
+	padding: 0px 0px 42px 0px;
+	margin-bottom: 26px;
+}
+.subtitle {
+	min-height: 16px;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	min-height: 17px;
+	color: #5d62b5;
+	display: inline-block;
+	padding: 0px 0px 33px 32px;
+}
+.subtitle::before {
+	content: "";
+	margin: 0px 0px 0px -32px;
+	padding: 0px 0px 0px 32px;
+	background: url("../img/icons/title.png") center no-repeat;
+}
+.title {
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 42px;
+}
+.part {
+	max-width: 324px;
+	display: inline-block;
+	min-height: 63px;
+	padding: 0px 0px 0px 86px;
+}
+.part:first-child {
+	background: url("../img/icons/01.png") 0 0 no-repeat;
+	margin: 0px 24px 0px 0px;
+}
+.part:nth-child(2) {
+	background: url("../img/icons/02.png") 0 0 no-repeat;
+	margin: 0px 24px 0px 0px;
+}
+.part:nth-child(3) {
+	background: url("../img/icons/03.png") 0 0 no-repeat;
+	margin: 0px 24px 0px 0px;
+}
+.part:last-child {
+	margin-right: 0;
+}
+.listtitle {
+	font-weight: 900;
+	font-size: 19px;
+	line-height: 26px;
+	color: #f2726f;
+	text-transform: capitalize;
+	display: inline-block;
+	margin: 0px 0px 20px 0px;
+}
+.listtext {
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.15px;
+}
+/*===============================================*/
+
+.work {
+	background-color: #1a1a1a;
+	font-family: "Helvetica Neue";
+}
+.workcontainer {
+	margin: 0px 0px 100px 0px;
+}
+.workcnttitle {
+	padding: 61px 0px 30px 0px;
+	margin: 0px 0px 30px 0px;
+}
+.worktitle {
+	margin: 0px auto;
+	color: #d9d9d9;
+	max-width: 307px;
+	min-height: 150px;
+	font-size: 36px;
+	line-height: 150px;
+	text-align: center;
+	letter-spacing: 0.2em;
+	text-transform: capitalize;
+	background: url("../img/bgw.png") center no-repeat;
+}
+.worktitle::after {
+	display: block;
+	content: "";
+	width: 60px;
+	height: 2px;
+	background: #34c759 no-repeat;
+	margin: 0px 0px 0px 120px;
+}
+.worklist {
+	max-width: 1110px;
+	margin: 0px auto;
+	white-space: nowrap;
+}
+.wct {
+	display: inline-block;
+	max-width: 255px;
+	min-height: 206px;
+	border: 1px transparent #000;
+	border-radius: 5%;
+	background-color: #252525;
+	padding: 24px 24px 60px 24px;
+	vertical-align: top;
+}
+.wct:nth-child(even) {
+	margin: 0px 30px 0px 0px;
+}
+.wct:nth-child(odd) {
+	margin: 0px 30px 0px 0px;
+}
+.wct:last-child {
+	margin-right: 0;
+}
+.wtitle {
+	display: inline-block;
+	font-size: 22px;
+	line-height: 26px;
+	letter-spacing: -0.275px;
+	text-transform: capitalize;
+	color: #ffffff;
+	margin: 0px 0px 26px 0px;
+}
+.wtitle::after {
+	content: "";
+	display: block;
+	margin: 10px 0px 0px 0px;
+	width: 56px;
+	height: 2px;
+	background-color: #34c759;
+}
+.wtext {
+	white-space: normal;
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: -0.1625px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.wct:hover {
+	background-color: #34c759;
+}
+.wct:hover .wtext {
+	color: #191919;
+}
+.wct:hover .wtitle {
+	color: #191919;
+}
+.wct:hover .wtitle::after {
+	background-color: #191919;
+}
+
+/*===============================================*/
+.lust {
+	padding: 100px;
+	background: url("../img/car/02bg.png") 0 0 / cover no-repeat;
+}
+.listdecor li {
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 24px;
+	min-height: 76px;
+	padding: 0px 0px 0px 76px;
+}
+.listdecor li {
+	background: url("../img/car/carfoot/02.png") 0 0 no-repeat;
+}
+.listdecor a {
+	color: #f51111;
+}
+.listdecor li:first-of-type:hover {
+	color: #008000;
+}
+.listdecor a:active {
+	color: #ffff00;
+}
+.listdecor a:visited {
+	color: #121213;
+}
+.listdecor *:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+}
+.listdecor p::first-line {
+	color: #ff0000;
+}
+.listdecor li::first-letter {
+	color: #ffff00;
+}
